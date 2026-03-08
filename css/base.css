@@ -1,0 +1,151 @@
+/* ═══════════════════════════════════════════
+   BASE — Reset, Body, Scrollbar, Utilities
+   ═══════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=Amiri:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital@0;1&display=swap');
+
+*, *::before, *::after {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* RTL support */
+body[data-lang="ar"] {
+  direction: rtl;
+  font-family: var(--font-arabic);
+}
+body[data-lang="ar"] .section-title,
+body[data-lang="ar"] .hero-title,
+body[data-lang="ar"] .letter-greeting {
+  font-family: var(--font-arabic);
+  font-weight: 700;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--rose), var(--gold));
+  border-radius: 2px;
+}
+
+/* Scroll Progress Bar */
+#progress-bar {
+  position: fixed; top: 0; left: 0; height: 3px;
+  background: var(--grad-rose);
+  width: 0%; z-index: 1000;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(240, 160, 192, 0.6);
+}
+
+/* Section Navigation Dots */
+#nav-dots {
+  position: fixed; right: 24px; top: 50%;
+  transform: translateY(-50%);
+  z-index: 800; display: flex; flex-direction: column; gap: 12px;
+}
+.nav-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(114, 48, 76, 0.2);
+  border: 1.5px solid rgba(114, 48, 76, 0.3);
+  cursor: pointer;
+  transition: all 0.3s var(--ease-spring);
+  position: relative;
+}
+.nav-dot::after {
+  content: attr(data-label);
+  position: absolute; right: 18px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--deep);
+  white-space: nowrap; opacity: 0;
+  transition: opacity 0.3s;
+  font-family: var(--font-body); font-weight: 500;
+}
+.nav-dot:hover::after,
+.nav-dot.active::after { opacity: 1; }
+.nav-dot.active {
+  background: var(--rose-deep);
+  border-color: var(--rose-deep);
+  transform: scale(1.4);
+  box-shadow: 0 0 0 3px rgba(212, 96, 138, 0.2);
+}
+.nav-dot:hover:not(.active) {
+  background: var(--rose);
+  border-color: var(--rose);
+  transform: scale(1.2);
+}
+
+/* Fade-in reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s var(--ease-out),
+              transform 0.9s var(--ease-out);
+}
+.reveal.in-view { opacity: 1; transform: none; }
+.reveal.delay-1 { transition-delay: 0.1s; }
+.reveal.delay-2 { transition-delay: 0.2s; }
+.reveal.delay-3 { transition-delay: 0.3s; }
+.reveal.delay-4 { transition-delay: 0.4s; }
+
+/* Section shared layout */
+section {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section header shared */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+.section-eyebrow {
+  display: inline-block;
+  font-size: 11px; letter-spacing: 0.35em;
+  text-transform: uppercase; color: var(--gold);
+  font-weight: 500; margin-bottom: 14px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5.5vw, 62px);
+  font-weight: 300; color: var(--deep);
+  line-height: 1.12;
+}
+.section-title em {
+  font-style: italic; color: var(--rose-deep);
+}
+.section-sub {
+  margin-top: 14px;
+  font-size: 15px; color: var(--muted);
+  font-weight: 300; line-height: 1.7;
+}
+
+/* Divider */
+.gold-divider {
+  width: 80px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+  margin: 28px auto;
+}
+
+/* Magnetic wrapper */
+.magnetic { display: inline-block; }
+
+/* Theme switch */
+body[data-theme="rose"] {
+  --cream: #fff0f5;
+  --blush: #ffe0ec;
+  --grad-hero: radial-gradient(ellipse 90% 80% at 50% -5%, #f5b8d4 0%, #fce0ec 40%, #fff0f5 100%);
+}

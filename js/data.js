@@ -1,0 +1,238 @@
+// ═══════════════════════════════════════════
+//  DATA — i18n Content for all languages
+//  Languages: EN, FR, AR
+// ═══════════════════════════════════════════
+
+export const LANGS = ['en', 'fr', 'ar'];
+
+export const CONTENT = {
+
+    // ─── ENGLISH ───────────────────────────
+    en: {
+        meta: { dir: 'ltr', label: 'EN' },
+        hero: {
+            eyebrow: "International Women's Day · 2025",
+            title: "Happy Women's Day,",
+            titleAccent: "Mom ❤️",
+            sub: "This little corner of the internet was crafted with every piece of love I have — just for you.",
+            cta: "Open Your Surprise",
+        },
+        letter: {
+            date: "March 8, 2026 · With All My Heart",
+            greeting: "My dearest Mama,",
+            body: "There are not enough words in any language to describe what you mean to me.\n\nYou have been my first home — the warmth I return to after every storm. You taught me strength without ever raising your voice. You showed me what love truly looks like: patient, quiet, and fierce all at once.\n\nEvery time I succeeded, you were my wings. Every time I fell, you were my ground. Every time the world felt cold, you were the fire.\n\nOn this day — your day — I want to stop everything and simply say: thank you. Thank you for every silent sacrifice. Thank you for every prayer you said for me that I will never even know about. Thank you for choosing me, every single day.\n\nYou are not just my mother. You are my hero, my home, and the greatest gift life has ever given me.\n\nI love you. More than I will ever know how to say.",
+            sig: "— With endless love, Ilyas 🌷",
+        },
+        thennow: {
+            eyebrow: "A Mother's Greatest Gift",
+            title: "Look How Far",
+            titleAccent: "I've Come",
+            quote: "You held my hand so I could let go — and become the man I am today.",
+            era1: "The Baby · 2010",
+            title1: "Your little miracle",
+            desc1: "Tiny fingers, tiny toes — and already the center of your whole world.",
+            era2: "Growing Up · 2018",
+            title2: "Your curious kid",
+            desc2: "Chasing dreams, making memories — and always coming home to you.",
+            era3: "The Man · Today",
+            title3: "Your grown son",
+            desc3: "Everything I am, every strength I carry — it all came from you.",
+            caption: "Three chapters. One constant. You.",
+        },
+        qualities: {
+            eyebrow: "Why I Look Up to You",
+            title: "You Are My",
+            titleAccent: "Hero",
+            hint: "Tap each card to reveal the truth ✨",
+            items: [
+                { icon: "🔥", label: "Strength", back: "You carry the weight of the world with a quiet grace that leaves me in absolute awe." },
+                { icon: "🌊", label: "Patience", back: "Through every storm and every mistake I made, your patience for me never, ever ran out." },
+                { icon: "💛", label: "Love", back: "Your love is unconditional — a constant, unwavering light that never dims, never fades." },
+                { icon: "🌙", label: "Sacrifice", back: "You gave up so much in complete silence, asking for nothing in return. I see every piece of it." },
+                { icon: "🌿", label: "Wisdom", back: "Your quiet, careful words have guided me further than any book ever could." },
+                { icon: "🦋", label: "Freedom", back: "You gave me wings and trusted me to fly, even when it must have terrified you." },
+            ],
+        },
+        timeline: {
+            eyebrow: "The Years",
+            title: "Our",
+            titleAccent: "Story Together",
+            items: [
+                { emoji: "🌱", year: "The Beginning", title: "The Day You Became My World", text: "Before I even knew what love was, you were already giving me all of yours.", expand: "I didn't choose you — but if I could, I would choose you a thousand times over." },
+                { emoji: "🎒", year: "Childhood", title: "You Were My Whole Universe", text: "Every first — first word, first step, first fall — you were there for every single one.", expand: "The way you watched me grow must have been the most beautiful kind of heartbreak." },
+                { emoji: "📖", year: "Growing Up", title: "You Made Me Who I Am", text: "The values you planted in me have become the roots I stand on.", expand: "I didn't realize it then, but everything good about me — that's you." },
+                { emoji: "⛈️", year: "Hard Times", title: "You Stayed Through Every Storm", text: "When life got hard, you got harder. You never let me see you break.", expand: "I now understand how much strength it takes to be strong for someone else." },
+                { emoji: "🌸", year: "Today", title: "And Today — I Celebrate You", text: "You deserve every flower, every celebration, every word of love in the world.", expand: "Thank you for existing. Thank you for being my mother. Thank you for being you." },
+            ],
+        },
+        counters: [
+            { val: "19+", label: "Years of Love" },
+            { val: "∞", label: "Meals Made with Love" },
+            { val: "∞", label: "Silent Sacrifices" },
+            { val: "1", label: "Mom Like You Exists" },
+        ],
+        surprise: {
+            eyebrow: "🔮 A secret lives below",
+            title: "You Deserve",
+            titleAccent: "The Whole World",
+            btn: "Open Your Gift",
+            popTitle: "You Deserve Everything, Mama.",
+            popMsg: "No words, no flowers, no website will ever be enough. But know this — every single day, I wake up grateful that you are mine. You are, and will always be, my greatest gift. I love you beyond any measure. 🌸",
+            popClose: "Close with Love 💕",
+        },
+        nav: ["Hero", "Letter", "Then & Now", "Qualities", "Timeline", "Stats", "Voice", "Surprise"],
+    },
+
+    // ─── FRENCH ────────────────────────────
+    fr: {
+        meta: { dir: 'ltr', label: 'FR' },
+        hero: {
+            eyebrow: "Journée Internationale de la Femme · 2026",
+            title: "Bonne Fête des Femmes,",
+            titleAccent: "Maman ❤️",
+            sub: "Ce petit coin d'internet a été créé avec tout mon amour — rien que pour toi.",
+            cta: "Ouvrir ta Surprise",
+        },
+        letter: {
+            date: "8 Mars 2026 · De tout mon coeur",
+            greeting: "Ma chère Maman,",
+            body: "Il n'existe pas assez de mots dans aucune langue pour décrire ce que tu représentes pour moi.\n\nTu as été ma première maison — la chaleur à laquelle je reviens après chaque tempête. Tu m'as appris la force sans jamais hausser la voix. Tu m'as montré ce qu'est le vrai amour : patient, silencieux, et puissant à la fois.\n\nChaque fois que j'ai réussi, tu étais mes ailes. Chaque fois que je suis tombé, tu étais mon sol. Chaque fois que le monde était froid, tu étais la flamme.\n\nEn ce jour — ton jour — je veux tout arrêter et simplement dire : merci. Merci pour chaque sacrifice silencieux. Merci pour chaque prière que tu as faite pour moi que je ne connaîtrai jamais. Merci de m'avoir choisi, chaque jour.\n\nTu n'es pas juste ma mère. Tu es mon héroïne, ma maison, et le plus grand cadeau que la vie m'ait jamais offert.\n\nJe t'aime. Plus que je ne saurai jamais le dire.",
+            sig: "— Avec tout mon amour, Ilyas 🌷",
+        },
+        thennow: {
+            eyebrow: "Le Plus Beau Cadeau d'une Mère",
+            title: "Regarde Jusqu'où",
+            titleAccent: "Je Suis Allé",
+            quote: "Tu as tenu ma main pour que je puisse la lâcher — et devenir l'homme que je suis.",
+            era1: "Le Bébé · 2010",
+            title1: "Ton petit miracle",
+            desc1: "De petits doigts, de petits orteils — déjà au centre de ton monde entier.",
+            era2: "En Grandissant · 2018",
+            title2: "Ton enfant curieux",
+            desc2: "À la poursuite des rêves, des souvenirs — et toujours à rentrer chez toi.",
+            era3: "L'Homme · Aujourd'hui",
+            title3: "Ton fils adulte",
+            desc3: "Tout ce que je suis, toute la force que je porte — tout vient de toi.",
+            caption: "Trois chapitres. Une constante. Toi.",
+        },
+        qualities: {
+            eyebrow: "Pourquoi tu es mon modèle",
+            title: "Tu Es Mon",
+            titleAccent: "Héroïne",
+            hint: "Clique sur chaque carte pour découvrir la vérité ✨",
+            items: [
+                { icon: "🔥", label: "Force", back: "Tu portes le poids du monde avec une grâce tranquille qui me laisse sans voix." },
+                { icon: "🌊", label: "Patience", back: "À travers chaque tempête et chaque erreur, ta patience n'a jamais faibli." },
+                { icon: "💛", label: "Amour", back: "Ton amour est inconditionnel — une lumière constante qui ne vacille jamais." },
+                { icon: "🌙", label: "Sacrifice", back: "Tu as tant donné en silence, sans rien demander en retour. Je vois tout." },
+                { icon: "🌿", label: "Sagesse", back: "Tes mots discrets m'ont guidé bien plus qu'aucun livre ne l'a fait." },
+                { icon: "🦋", label: "Liberté", back: "Tu m'as donné des ailes et tu m'as fait confiance pour voler." },
+            ],
+        },
+        timeline: {
+            eyebrow: "Les Années",
+            title: "Notre",
+            titleAccent: "Histoire Ensemble",
+            items: [
+                { emoji: "🌱", year: "Le début", title: "Le Jour Où Tu Es Devenue Mon Monde", text: "Avant même que je sache ce qu'était l'amour, tu me donnais déjà tout le tien.", expand: "Je ne t'ai pas choisie — mais si je pouvais, je te choisirais mille fois." },
+                { emoji: "🎒", year: "Enfance", title: "Tu Étais Tout Mon Univers", text: "Chaque première fois — tu étais là pour chacune.", expand: "La façon dont tu m'as regardé grandir a dû être le plus beau des chagrins." },
+                { emoji: "📖", year: "En grandissant", title: "Tu M'As Fait Ce Que Je Suis", text: "Les valeurs que tu as plantées en moi sont devenues mes racines.", expand: "Tout ce qu'il y a de bon en moi — c'est toi." },
+                { emoji: "⛈️", year: "Moments difficiles", title: "Tu Es Restée Lors de Chaque Tempête", text: "Quand la vie est devenue difficile, tu es devenue plus forte.", expand: "Je comprends maintenant combien il faut de force pour être fort pour quelqu'un d'autre." },
+                { emoji: "🌸", year: "Aujourd'hui", title: "Et Aujourd'hui — Je Te Célèbre", text: "Tu mérites chaque fleur, chaque célébration.", expand: "Merci d'exister. Merci d'être ma mère. Merci d'être toi." },
+            ],
+        },
+        counters: [
+            { val: "19+", label: "Années d'Amour" },
+            { val: "∞", label: "Repas Cuisinés avec Amour" },
+            { val: "∞", label: "Sacrifices Silencieux" },
+            { val: "1", label: "Maman Comme Toi au Monde" },
+        ],
+        surprise: {
+            eyebrow: "🔮 Un secret se cache ici",
+            title: "Tu Mérites",
+            titleAccent: "Le Monde Entier",
+            btn: "Ouvrir ton Cadeau",
+            popTitle: "Tu mérites tout, Maman.",
+            popMsg: "Aucun mot, aucune fleur, aucun site web ne suffira jamais. Mais sache ceci — chaque jour, je me réveille reconnaissant que tu sois la mienne. Je t'aime au-delà de toute mesure. 🌸",
+            popClose: "Fermer avec amour 💕",
+        },
+        nav: ["Accueil", "Lettre", "Alors & Maintenant", "Qualités", "Chronologie", "Stats", "Voix", "Surprise"],
+    },
+
+    // ─── ARABIC ────────────────────────────
+    ar: {
+        meta: { dir: 'rtl', label: 'AR' },
+        hero: {
+            eyebrow: "يوم المرأة العالمي · ٢٠٢٥",
+            title: "عيد المرأة سعيد،",
+            titleAccent: "أمي ❤️",
+            sub: "هذه الصفحة الصغيرة صُنعت بكل حبي — لكِ وحدكِ.",
+            cta: "افتحي مفاجأتكِ",
+        },
+        letter: {
+            date: "8 مارس 2026 · من أعماق قلبي",
+            greeting: "أمي الغالية،",
+            body: "لا توجد كلمات كافية في أي لغة لتصف ما تعنينه لي.\n\nكنتِ وطني الأول — الدفء الذي أعود إليه بعد كل عاصفة. علّمتِني القوة دون أن ترفعي صوتك. أريتِني معنى الحب الحقيقي: صبور، هادئ، وعميق في آنٍ واحد.\n\nفي كل مرة نجحتُ، كنتِ جناحيّ. وفي كل مرة سقطتُ، كنتِ أرضي. وفي كل مرة بَرَد العالم، كنتِ دفئي.\n\nفي هذا اليوم — يومكِ — أريد أن أتوقف عن كل شيء وأقول ببساطة: شكراً. شكراً على كل تضحية صامتة. شكراً على كل دعاء رفعتِه من أجلي لن أعلمه أبداً. شكراً لأنكِ اخترتِني، كل يوم.\n\nأنتِ لستِ فقط أمي. أنتِ بطلتي، وبيتي، وأعظم هدية أعطانيها الله في حياتي.\n\nأحبكِ. أكثر مما أعرف كيف أقول.",
+            sig: "— بحب لا نهاية له، إلياس 🌷",
+        },
+        thennow: {
+            eyebrow: "أعظم هدية أم",
+            title: "انظري كم",
+            titleAccent: "كبرتُ",
+            quote: "أمسكتِ يدي حتى أستطيع الإفراج عنها — وأصبح الرجل الذي أنا عليه اليوم.",
+            era1: "لطفل 2010  ",
+            title1: "معجزتكِ الصغيرة",
+            desc1: "أصابع صغيرة، أصابع أقدام صغيرة — وبالفعل مركز عالمكِ بأكمله.",
+            era2: "في الكبر 2018",
+            title2: "طفلكِ الفضولي",
+            desc2: "يطارد الأحلام، يصنع الذكريات — ودائماً يعود إلى بيتكِ.",
+            era3: "الرجل · اليوم",
+            title3: "ابنكِ الرجل",
+            desc3: "كل ما أنا عليه، كل قوة أحملها — كلها جاءت منكِ.",
+            caption: "ثلاثة فصول. ثابت واحد. أنتِ.",
+        },
+        qualities: {
+            eyebrow: "لماذا أنتِ قدوتي",
+            title: "أنتِ",
+            titleAccent: "بطلتي",
+            hint: "اضغطي على كل بطاقة لاكتشاف الحقيقة ✨",
+            items: [
+                { icon: "🔥", label: "القوة", back: "تحملين ثقل الدنيا بصمت وهدوء يذهلني كل يوم." },
+                { icon: "🌊", label: "الصبر", back: "في كل عاصفة وكل خطأ ارتكبته، لم ينفد صبركِ معي أبداً." },
+                { icon: "💛", label: "الحب", back: "حبكِ لا يشترط شيئاً — نور ثابت لا يتزعزع ولا يخبو." },
+                { icon: "🌙", label: "التضحية", back: "قدّمتِ الكثير في صمت تام دون أن تطلبي شيئاً. أرى كل شيء." },
+                { icon: "🌿", label: "الحكمة", back: "كلماتك الهادئة قادتني أبعد مما فعل أي كتاب." },
+                { icon: "🦋", label: "الحرية", back: "أعطيتِني أجنحة وثقتِ بي لأطير، حتى وإن كان ذلك يخيفكِ." },
+            ],
+        },
+        timeline: {
+            eyebrow: "السنوات",
+            title: "قصتنا",
+            titleAccent: "معاً",
+            items: [
+                { emoji: "🌱", year: "البداية", title: "اليوم الذي صرتِ فيه عالمي", text: "قبل أن أعرف ما هو الحب، كنتِ تعطيني منه كل شيء.", expand: "لم أختركِ — لكن لو استطعت، لاخترتكِ ألف مرة." },
+                { emoji: "🎒", year: "الطفولة", title: "كنتِ كل كوني", text: "كل أول مرة — كنتِ موجودة لكل واحدة.", expand: "الطريقة التي رأيتِ بها نموي لابد أنها كانت أجمل أنواع الحزن." },
+                { emoji: "📖", year: "الكبر", title: "أنتِ من صنعتِني", text: "القيم التي زرعتِها فيّ أصبحت الجذور التي أقف عليها.", expand: "كل ما هو جيد فيّ — هذا أنتِ." },
+                { emoji: "⛈️", year: "الأوقات الصعبة", title: "بقيتِ في كل عاصفة", text: "حين اشتدت الحياة، اشتددتِ أكثر.", expand: "أفهم الآن كم يحتاج الإنسان من قوة ليكون قوياً من أجل آخر." },
+                { emoji: "🌸", year: "اليوم", title: "واليوم — أحتفل بكِ", text: "تستحقين كل زهرة وكل احتفال.", expand: "شكراً لأنكِ موجودة. شكراً لأنكِ أمي. شكراً لأنكِ أنتِ." },
+            ],
+        },
+        counters: [
+            { val: "+19", label: "سنة من الحب" },
+            { val: "∞", label: "وجبة طُبخت بحب" },
+            { val: "∞", label: "تضحية صامتة" },
+            { val: "١", label: "أم مثلكِ في الدنيا" },
+        ],
+        surprise: {
+            eyebrow: "🔮 سر صغير مخبأ هنا",
+            title: "أنتِ تستحقين",
+            titleAccent: "كل الدنيا",
+            btn: "افتحي هديتكِ",
+            popTitle: "تستحقين كل شيء، أمي.",
+            popMsg: "لا كلمات ولا زهور ولا موقع إلكتروني سيكفي يوماً. لكن اعلمي — كل يوم أستيقظ شاكراً الله أنكِ أمي. أحبكِ بلا حدود. 🌸",
+            popClose: "إغلاق بمحبة 💕",
+        },
+        nav: ["البداية", "الرسالة", "قبل وبعد", "الصفات", "القصة", "الأرقام", "الصوت", "المفاجأة"],
+    },
+
+};

@@ -1,0 +1,57 @@
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS — Queen of My Life
+   ═══════════════════════════════════════════ */
+:root {
+  /* Palette */
+  --rose:        #f0a0c0;
+  --rose-deep:   #d4608a;
+  --rose-light:  #fce8f0;
+  --blush:       #fdf0f5;
+  --cream:       #fdf7f2;
+  --gold:        #c8924e;
+  --gold-light:  #e8c99a;
+  --gold-pale:   #f5e8d5;
+  --deep:        #72304c;
+  --deep-dark:   #4a1a30;
+  --text:        #3e2438;
+  --muted:       #9a6878;
+  --white:       #ffffff;
+
+  /* Gradients */
+  --grad-hero:   radial-gradient(ellipse 90% 80% at 50% -5%, #fbd3e9 0%, #fce8f0 40%, #fdf7f2 100%);
+  --grad-rose:   linear-gradient(135deg, var(--rose) 0%, #e87aaa 50%, var(--gold) 100%);
+  --grad-dark:   linear-gradient(140deg, var(--deep-dark) 0%, #6a2040 100%);
+  --grad-card:   linear-gradient(160deg, #fff 0%, var(--blush) 100%);
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body:    'Jost', sans-serif;
+  --font-arabic:  'Amiri', serif;
+
+  /* Spacing scale */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  32px;
+  --space-lg:  64px;
+  --space-xl:  100px;
+
+  /* Shadows */
+  --shadow-soft:  0 4px 24px rgba(114, 48, 76, 0.10);
+  --shadow-med:   0 8px 48px rgba(114, 48, 76, 0.15);
+  --shadow-deep:  0 20px 80px rgba(114, 48, 76, 0.20);
+  --shadow-rose:  0 12px 40px rgba(212, 96, 138, 0.35);
+
+  /* Borders */
+  --radius-sm:  4px;
+  --radius-md:  12px;
+  --radius-full: 999px;
+  --border-gold: 1px solid rgba(200, 146, 78, 0.25);
+
+  /* Transitions */
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-smooth: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  --ease-out:    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --t-fast:   0.2s;
+  --t-med:    0.4s;
+  --t-slow:   0.8s;
+}

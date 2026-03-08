@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To The Queen of My Life 🌸</title>
+    <meta name="description" content="A love letter to the most important woman in the world." />
+
+    <!-- Stylesheets (order matters) -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/ui.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+
+    <!-- Timeline toggle button extra style -->
+    <style>
+        .timeline-toggle {
+            margin-top: 14px;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform .3s;
+            display: block;
+        }
+        
+        .timeline-toggle:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body data-lang="en">
+
+    <!-- ── CUSTOM CURSOR ── -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- ── SCROLL PROGRESS ── -->
+    <div id="progress-bar"></div>
+
+    <!-- ── NAV DOTS ── -->
+    <nav id="nav-dots" aria-label="Section navigation"></nav>
+
+    <!-- ── LANGUAGE BAR ── -->
+    <div id="lang-bar" role="group" aria-label="Language switcher"></div>
+
+    <!-- ── THEME TOGGLE ── -->
+    <button id="theme-toggle" aria-label="Toggle theme">🌸</button>
+
+    <!-- ── MUSIC PLAYER ── -->
+    <div id="music-player">
+        <button id="music-btn" aria-label="Play/pause music">▶</button>
+        <div id="music-visualizer">
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+        </div>
+        <span id="music-label">Soft Music</span>
+    </div>
+
+    <!-- Music source — replace with your own URL -->
+    <audio id="bg-music" loop preload="none">
+    <source src="love.mp3" type="audio/mpeg" />
+  </audio>
+
+    <!-- ── TOAST ── -->
+    <div id="toast" role="alert" aria-live="polite"></div>
+
+    <!-- ── EASTER EGG COUNTER ── -->
+    <div id="crown-counter" aria-hidden="true"></div>
+
+    <!-- ══════════════════════════════════════════
+       §1  HERO
+  ══════════════════════════════════════════ -->
+    <section id="hero" aria-label="Welcome">
+        <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+        <!-- Decorative rings -->
+        <div class="hero-layer hero-layer-1" aria-hidden="true">
+            <div class="hero-ring hero-ring-1"></div>
+            <div class="hero-ring hero-ring-2"></div>
+            <div class="hero-ring hero-ring-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <span class="hero-crown" role="img" aria-label="Crown" title="Click 5 times for a secret 👑">👑</span>
+            <p class="hero-eyebrow">
+                <span data-t="hero-eyebrow">International Women's Day · 2025</span>
+            </p>
+            <h1 class="hero-title" data-t="hero-title">
+                Happy Women's Day,<span class="accent">Mom ❤️</span>
+            </h1>
+            <p class="hero-sub" data-t="hero-sub">
+                This little corner of the internet was crafted with every piece of love I have — just for you.
+            </p>
+            <a href="#letter" class="hero-cta magnetic">
+                <span class="hero-cta-icon">🌸</span>
+                <span data-t="hero-cta">Open Your Surprise</span>
+            </a>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       §2  LETTER
+  ══════════════════════════════════════════ -->
+    <section id="letter" aria-label="Personal letter">
+        <div class="letter-wrap">
+            <div class="letter-envelope reveal">
+                <span class="envelope-icon" aria-hidden="true">💌</span>
+            </div>
+
+            <div class="letter-card reveal delay-1">
+                <!-- Corner ornaments -->
+                <span class="corner-ornament tl" aria-hidden="true">✦</span>
+                <span class="corner-ornament bl" aria-hidden="true">✦</span>
+                <span class="corner-ornament br" aria-hidden="true">✦</span>
+
+                <div class="letter-meta">
+                    <span class="letter-date" data-t="letter-date">March 8, 2025 · With All My Heart</span>
+                    <span class="letter-stamp" aria-hidden="true">💌</span>
+                </div>
+
+                <h2 class="letter-greeting" data-t="letter-greeting">My dearest Mama,</h2>
+
+                <div class="gold-divider" aria-hidden="true"></div>
+
+                <!-- Typed content injected here -->
+                <div class="letter-body" id="typed-text" aria-live="polite"></div>
+
+                <!-- Speed controls -->
+                <div class="type-speed">
+                    <span>Reading speed:</span>
+                    <button class="speed-btn" data-speed="slow">Slow</button>
+                    <button class="speed-btn active" data-speed="normal">Normal</button>
+                    <button class="speed-btn" data-speed="fast">Fast</button>
+                </div>
+
+                <p class="letter-sig" id="letter-sig" data-t="letter-sig">— With endless love, Ilyas 🌷</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+       §3  GROWTH TIMELINE — 3 photos
+       ─────────────────────────────────────────
+       HOW TO ADD YOUR PHOTOS:
+       Put your 3 images in the  images/  folder
+       and replace the src="" paths below.
+       Recommended size: 600×750px or similar portrait.
+  ══════════════════════════════════════════ -->
+    <section id="thennow" aria-label="Growth timeline">
+        <div class="thennow-wrap">
+
+            <div class="section-header reveal">
+                <span class="section-eyebrow" data-t="thennow-eyebrow">A Mother's Greatest Gift</span>
+                <h2 class="section-title" data-t="thennow-title">
+                    Look How Far <em>I've Come</em>
+                </h2>
+            </div>
+
+            <p class="thennow-quote reveal" data-t="thennow-quote">
+                You held my hand so I could let go — and become the man I am today.
+            </p>
+
+            <div class="thennow-grid reveal">
+
+                <!-- ─── PHOTO 1 — Baby / Toddler ─── -->
+                <!-- Replace src with: images/baby.jpg -->
+                <div class="growth-card">
+                    <div class="growth-photo-wrap">
+                        <img src="images/photo1.jpg" alt="Baby Ilyas" class="growth-photo" />
+                        <div class="growth-overlay">
+                            <span class="growth-overlay-emoji">🍼</span>
+                        </div>
+                        <div class="growth-badge">01</div>
+                    </div>
+                    <div class="growth-footer">
+                        <span class="growth-era" data-t="thennow-era1">The Baby · 2000s</span>
+                        <h3 class="growth-title" data-t="thennow-title1">Your little miracle</h3>
+                        <p class="growth-desc" data-t="thennow-desc1">Tiny fingers, tiny toes — and already the center of your whole world.</p>
+                    </div>
+                    <div class="growth-line"></div>
+                </div>
+
+                <!-- ─── PHOTO 2 — Child / Teen ─── -->
+                <!-- Replace src with: images/child.jpg -->
+                <div class="growth-card growth-card--mid">
+                    <div class="growth-photo-wrap">
+                        <img src="images/photo2.jpg" alt="Young Ilyas" class="growth-photo" />
+                        <div class="growth-overlay">
+                            <span class="growth-overlay-emoji">🎒</span>
+                        </div>
+                        <div class="growth-badge">02</div>
+                    </div>
+                    <div class="growth-footer">
+                        <span class="growth-era" data-t="thennow-era2">Growing Up · 2010s</span>
+                        <h3 class="growth-title" data-t="thennow-title2">Your curious kid</h3>
+                        <p class="growth-desc" data-t="thennow-desc2">Chasing dreams, making memories — and always coming home to you.</p>
+                    </div>
+                    <div class="growth-line"></div>
+                </div>
+
+                <!-- ─── PHOTO 3 — Now / Adult ─── -->
+                <!-- Replace src with: images/now.jpg -->
+                <div class="growth-card growth-card--now">
+                    <div class="growth-photo-wrap">
+                        <img src="images/photo3.jpg" alt="Ilyas today" class="growth-photo" />
+                        <div class="growth-overlay">
+                            <span class="growth-overlay-emoji">👨</span>
+                        </div>
+                        <div class="growth-badge growth-badge--gold">03</div>
+                    </div>
+                    <div class="growth-footer">
+                        <span class="growth-era" data-t="thennow-era3">The Man · Today</span>
+                        <h3 class="growth-title" data-t="thennow-title3">Your grown son</h3>
+                        <p class="growth-desc" data-t="thennow-desc3">Everything I am, every strength I carry — it all came from you.</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /thennow-grid -->
+
+            <!-- Bottom caption -->
+            <p class="thennow-caption reveal" data-t="thennow-caption">
+                Three chapters. One constant. You.
+            </p>
+
+        </div>
+        <!-- /thennow-wrap -->
+    </section>
+
+    <!-- Growth photo lightbox -->
+    <div id="thennow-lightbox" role="dialog" aria-modal="true" aria-label="Photo fullscreen">
+        <img src="" alt="" id="thennow-lightbox-img" />
+        <button id="thennow-lightbox-close" aria-label="Close">✕</button>
+        <span class="lightbox-caption" id="thennow-lightbox-caption"></span>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+       §4  QUALITIES — FLIP CARDS
+  ══════════════════════════════════════════ -->
+    <section id="qualities" aria-label="Her qualities">
+        <div class="section-header reveal">
+            <span class="section-eyebrow" data-t="qualities-eyebrow">Why I Look Up to You</span>
+            <h2 class="section-title" data-t="qualities-title">You Are My <em>Hero</em></h2>
+            <p class="section-sub" data-t="qualities-hint">Tap each card to reveal the truth ✨</p>
+        </div>
+
+        <!-- Built by JS -->
+        <div id="qualities-grid" class="qualities-grid" role="list"></div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       §5  TIMELINE
+  ══════════════════════════════════════════ -->
+    <section id="timeline" aria-label="Memory timeline">
+        <div class="section-header reveal">
+            <span class="section-eyebrow" data-t="timeline-eyebrow">The Years</span>
+            <h2 class="section-title" data-t="timeline-title">Our <em>Story Together</em></h2>
+        </div>
+
+        <!-- Built by JS -->
+        <div class="timeline-track" id="timeline-track"></div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       §6  COUNTERS
+  ══════════════════════════════════════════ -->
+    <section id="counters" aria-label="Love statistics">
+        <!-- Built by JS -->
+        <div class="counters-grid" id="counters-grid"></div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       §7  VOICE — "I love you" in every language
+       ─────────────────────────────────────────
+       HOW TO ADD YOUR RECORDINGS:
+       Put your audio files in the  audio/  folder
+       and match the src values in js/voice.js
+       under the TRACKS array.
+       Recommended format: .mp3, keep under 5 MB each.
+  ══════════════════════════════════════════ -->
+    <section id="voice" aria-label="Voice messages">
+        <div class="voice-wrap">
+
+            <div class="section-header reveal">
+                <span class="section-eyebrow">In Every Language</span>
+                <h2 class="section-title">My Voice, <em>For You</em></h2>
+                <p class="section-sub">Press play — and hear it straight from my heart.</p>
+            </div>
+
+            <!-- Cards injected by voice.js -->
+            <div class="voice-grid" id="voice-grid"></div>
+
+            <p class="voice-footer-note reveal">
+                🎙️ Recorded by Ilyas — just for you, Mama.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       §8  SURPRISE
+  ══════════════════════════════════════════ -->
+    <section id="surprise-section" aria-label="Surprise gift">
+        <div class="surprise-wrap reveal">
+            <p class="surprise-hint" data-t="surprise-eyebrow">🔮 A secret lives below</p>
+
+            <h2 class="section-title" style="margin-bottom: 40px;">
+                <span data-t="surprise-title">You Deserve</span>
+                <em style="color:var(--rose-deep)" data-t="surprise-title-accent"> The Whole World</em>
+            </h2>
+
+            <button class="surprise-btn magnetic" id="surprise-trigger">
+        <span aria-hidden="true">🎁</span>
+        <span data-t="surprise-btn">Open Your Gift</span>
+      </button>
+        </div>
+    </section>
+
+    <!-- Surprise popup -->
+    <div id="surprise-popup" role="dialog" aria-modal="true" aria-label="Special message">
+        <div class="surprise-card">
+            <span class="surprise-crown" role="img" aria-label="Crown" aria-hidden="true">👑</span>
+            <h3 class="surprise-title" data-t="surprise-pop-title">You Deserve Everything, Mama.</h3>
+            <p class="surprise-msg" data-t="surprise-pop-msg">
+                No words, no flowers, no website will ever be enough. But know this — every single day, I wake up grateful that you are mine. You are, and will always be, my greatest gift. I love you beyond any measure. 🌸
+            </p>
+            <button class="surprise-close" id="surprise-popup-close" data-t="surprise-pop-close">
+        Close with Love 💕
+      </button>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+    <footer>
+        <p>Made with <span class="heart">♥</span> by Ilyas — For the Queen of My Life</p>
+        <p class="small">Because some loves are too big to express — but we try anyway.</p>
+    </footer>
+
+    <!-- ── SCRIPTS (ES Modules) ── -->
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
